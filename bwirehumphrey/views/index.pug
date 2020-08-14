@@ -1,0 +1,60 @@
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1')
+title Covid Test Registration
+//  bootstrapcss 
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', crossorigin='anonymous')
+//  CustomCss 
+link(rel='stylesheet', href='/bwirehumphrey/public/css/Covidreg.css')
+nav.navbar.navbar-dark.bg-light.navbar-expand-sm
+  span.navbarImage
+    img(src='/bwirehumphrey/public/img/uganda-flag-part.png', width='650', height='150', alt='logo1')
+  span.navbarImage
+    img(src='/bwirehumphrey/public/img/uganda-coat_of_arms.png', width='100', height='150', alt='logo2')
+  span.navbar-image
+    img(src='/bwirehumphrey/public/img/uganda-flag-part.png', width='650', height='150', alt='logo3')
+    h4 Ministry Of Health
+    h1 Covid 19 (Corona Virus)
+    h4 Virus Test Registration Form
+form#covidregt(name='covidreg', action='/', onsubmit='return covidreg()' method='POST') 
+  .form-row
+    .col
+      label(for='surname') Surname
+      input.form-control(type='text', placeholder='First name'required)
+    .col
+      label(for='surname') Given name
+      input.form-control(type='text', placeholder='Last name'required)
+  br
+  .form-row
+    .col
+      label(for='surname') Date of Birth
+      input.form-control(type='text', placeholder='First name'required)
+    .col
+      label(for='surname') Place of residence
+      input.form-control(type='text', placeholder='Last name'required)
+  br
+  .form-row
+    .col
+      label(for='surname') Occupation
+      input.form-control(type='text', placeholder='First name'required)
+    .col
+      label(for='surname') Nationality
+      input.form-control(type='text', placeholder='Last name'required)
+  br
+  p Gender
+  hr
+  .custom-control.custom-radio.custom-control-inline
+    input#customRadioInline1.custom-control-input(type='radio', name='customRadioInline1'required)
+    label.custom-control-label(for='customRadioInline1') Male
+  .custom-control.custom-radio.custom-control-inline
+    input#customRadioInline2.custom-control-input(type='radio', name='customRadioInline1'required)
+    label.custom-control-label(for='customRadioInline2') Fermale
+  br
+  .form-group.col-md-4
+    label(for='inputState') Category
+    select#inputState.form-control
+      option(selected, style='text-align: center;') --Select Category--
+      option ...
+    br
+    .col-auto
+      button.btn.btn-primary.mb-2(type='submit') Submit
+script(src)
