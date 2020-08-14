@@ -8,7 +8,7 @@ const app = express();
 
 
 //importing my models
-const covidReg = require('./models/covidRegModule');
+const CovidReg = require('./models/covidRegModule');
 
 
 // To parse URL encoded data
@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-  console.log(req.file);
+  save(req.file);
   const CovidReg = new CovidReg({
       surname: req.bodysurname3,        
       DateofBirth: req.body.DateofBirth,
