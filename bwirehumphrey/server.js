@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
   res.sendFile("index.html", { root: view});
 });
 
-app.post('/contactus', async (req, res) => {
+app.post('/', async (req, res) => {
   console.log(req.file);
   const CovidReg = new CovidReg({
       surname: req.bodysurname3,        
