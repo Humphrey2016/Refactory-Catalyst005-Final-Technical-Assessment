@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mongodb = require('mongodb');
+const path = require('path');
+
+require('dotenv').config();
+const app = express();
+
 
 //importing my models
 const covidReg = require('./models/covidRegModule');
@@ -41,14 +45,13 @@ mongoose.connection
 app.use(express.static(path.join(__dirname, 'public')));
 
 //getting Covidregistrationm page and setting a route for it
-router.get('/', (req, res) => {
-  res.render("index");
+app.get('/', (req, res) => {
+  res.sendFile("index.html", { root: view});
 });
 
-
-router.post('/contactus', async (req, res) => {
+app.post('/contactus', async (req, res) => {
   console.log(req.file);
-  const contactus = new Contactus({
+  const CovidReg = new CovidReg({
       surname: req.bodysurname3,        
       DateofBirth: req.body.DateofBirth,
       Givenname: req.body.Givenname,

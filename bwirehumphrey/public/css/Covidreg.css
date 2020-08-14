@@ -1,3 +1,10 @@
 *{
-    padding: 10;
+    border-color: rgb(73, 69, 69);}
+
+.heading{
+    text-align-last: center;
+}
+
+form{
+    margin: 3rem;
 }
